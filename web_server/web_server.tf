@@ -1,4 +1,5 @@
 provider "aws" {
+  shared_credentials_file = "/root/.aws/credentials"
   profile = "cb"
   region = "us-west-2"
 }
