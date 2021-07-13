@@ -12,3 +12,7 @@ resource "local_file" "foo" {
     filename = "/tmp/foo.bar"
 }
 
+resource "local_file" "bar" {
+    content     = var.content
+    filename = "/tmp/bar.foo"
+}
