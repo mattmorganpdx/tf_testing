@@ -14,5 +14,5 @@ resource "local_file" "foo" {
 
 resource "local_file" "bar" {
     content     = var.content
-    filename = "/tmp/bar.foo"
+    filename = "/tmp/bar.foo.txt"
 }
