@@ -1,6 +1,6 @@
 
 variable "content" {
-    default = "moo!"
+    default = "oink!"
 }
 
 resource "local_file" "config_file" {
