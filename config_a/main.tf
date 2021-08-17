@@ -1,6 +1,6 @@
 
 variable "content" {
-    default = "oink! from the config_a sub directory"
+    default = "I'm the test branch"
 }
 
 resource "local_file" "config_file" {
