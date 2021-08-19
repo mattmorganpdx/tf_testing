@@ -1,6 +1,6 @@
 
 variable "content" {
-    default = "oink!"
+    default = "oink! from the config_a sub directory"
 }
 
 resource "local_file" "config_file" {

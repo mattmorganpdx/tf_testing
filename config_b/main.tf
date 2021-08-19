@@ -1,6 +1,6 @@
 
 variable "content" {
-    default = "moo!"
+    default = "moo! from the config_b sub directory"
 }
 
 resource "local_file" "config_file" {
