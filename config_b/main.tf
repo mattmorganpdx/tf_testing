@@ -1,6 +1,6 @@
 
 variable "content" {
-    default = "moo! from the config_b sub directory"
+    default = "moo! I'm the test branch for config_b"
 }
 
 resource "local_file" "config_file" {
