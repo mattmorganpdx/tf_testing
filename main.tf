@@ -1,8 +1,3 @@
-
-module "web_server" {
-    source = "./web_server"
-}
-
 variable "content_a" {
     default = "moo! from the root directory"
 }
