@@ -12,6 +12,9 @@ provider "azurerm" {
   features {}
 }
 
+variable "hostname_suffix" {
+    default = "00"
+}
 
 # Create public IPs
 resource "azurerm_public_ip" "myterraformpublicip" {
@@ -113,7 +116,7 @@ output "tls_private_key" {
 
 # Create virtual machine
 resource "azurerm_linux_virtual_machine" "myterraformvm" {
-    name                  = "myVM"
+    name                  = "ubuntu-test-${var.hostname_suffix}"
     location              = "westus2"
     resource_group_name   = "mmorgan_rg"
     network_interface_ids = [azurerm_network_interface.myterraformnic.id]
