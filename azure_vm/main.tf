@@ -13,7 +13,7 @@ provider "azurerm" {
 }
 
 variable "hostname_suffix" {
-    default = "-test"
+    default = "00"
 }
 
 # Create public IPs
