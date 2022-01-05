@@ -1,6 +1,6 @@
 terraform {
   backend "pg" {
-    conn_str = "postgres://postgres:mysecretpassword@172.19.0.1/terraform_backend?sslmode=disable"
+    conn_str = "postgres://cb_dba:cb_pass@localhost/terraform_backend?sslmode=disable"
   }
 }
 
