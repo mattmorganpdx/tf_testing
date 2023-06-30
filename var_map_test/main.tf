@@ -1,4 +1,5 @@
 variable "map_type_test" {
+    type = map(any)
     default = {name = "Mabel", content = 52}
 }
 
