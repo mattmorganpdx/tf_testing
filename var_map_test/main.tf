@@ -16,18 +16,27 @@ variable "bool_type_test" {
   default = false
 }
 
+variable "resource_handler" {
+  type    = string
+  default = ""
+}
+
+variable "static" {
+  type    = string
+  default = ""
+}
 
 resource "local_file" "foo" {
   filename = "/tmp/${var.map_type_test["name"]}"
   content  = <<-EOT
+    resource_handler = ${var.resource_handler}
+    something static = ${var.static}
     ${var.map_type_test["content"]}
     %{for color in var.list_type_test~}
 list item = ${color}
     %{endfor~}
 Bool vaule = ${var.bool_type_test}
   EOT
-
-
 }
 
 output "my_map" {
