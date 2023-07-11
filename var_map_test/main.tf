@@ -22,8 +22,8 @@ variable "resource_handler" {
 }
 
 variable "static" {
-  type    = string
-  default = ""
+  type    = number
+  default = 0
 }
 
 resource "local_file" "foo" {
