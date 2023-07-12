@@ -16,6 +16,10 @@ variable "bool_type_test" {
   default = false
 }
 
+variable "null_type_test" {
+  default = "default if not supplied or null"
+}
+
 variable "resource_handler" {
   type    = string
   default = ""
@@ -49,6 +53,18 @@ output "my_list" {
 
 output "my_bool" {
   value = var.bool_type_test
+}
+
+output "my_rh" {
+  value = var.resource_handler
+}
+
+output "my_static_number" {
+  value = var.static
+}
+
+output "my_nullable" {
+  value = var.null_type_test != "null" ? var.null_type_test : "default because null"
 }
 
 
