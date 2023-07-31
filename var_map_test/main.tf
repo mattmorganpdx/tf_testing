@@ -43,6 +43,12 @@ Bool vaule = ${var.bool_type_test}
   EOT
 }
 
+resource "local_file" "test" {
+  count = length(var.list_type_test)
+  filename = "/tmp/test-${count.index}"
+  content = element(var.list_type_test, count.index)
+}
+
 output "my_map" {
   value = var.map_type_test
 }
