@@ -17,7 +17,7 @@ variable "bool_type_test" {
 }
 
 variable "null_type_test" {
-  default = "default if not supplied or null"
+  default = "default if not supplied"
 }
 
 variable "resource_handler" {
