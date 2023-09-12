@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "cmp-tf-backend"
-    key = "state"
+    key = "state/state"
     region = "us-west-2"
   }
 }
